@@ -1,1 +1,16 @@
+#!/bin/bash
 
+# Define the username as a variable
+username="bea"
+
+# Add the user
+useradd $username
+
+# Add the user to the "devops" group
+usermod -aG devops $username
+
+# Create the home directory for the user
+mkdir -p /home/$username
+
+# Set ownership of the home directory to the user
+chown -R $username:$username /home/$username
