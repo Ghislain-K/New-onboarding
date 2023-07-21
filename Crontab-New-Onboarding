@@ -1,1 +1,7 @@
+crontab -e
+crontab -l
+crontab -r     (To STOP the current running cron job)
 
+chmod +x your_script.sh
+
+* * * * * bash your_script.sh      (This script will be execute every minutes)
